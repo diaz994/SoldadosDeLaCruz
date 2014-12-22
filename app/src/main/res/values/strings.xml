@@ -2,9 +2,12 @@
 <resources>
 
     <string name="app_name">Soldados de la Cruz</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Escuela Sabatica</string>
+    <string name="title_section2">Mesa De Fe</string>
+    <string name="title_section3">Radio</string>
+    <string name="title_section4">Noticias</string>
+    <string name="title_section5">Donar</string>
+    <string name="title_section6">Informacion</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
