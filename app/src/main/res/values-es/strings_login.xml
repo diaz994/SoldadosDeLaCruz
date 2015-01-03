@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_string">Iniciar Sesion</string>
+    <string name="register_string">Registrar</string>
+    <string name="login_facebook_string">Inicie con Facebook</string>
+    <string name="login_twitter_string">Inicie con Twitter</string>
+    <string name="login_google_string">Inicie con Google</string>
+</resources>

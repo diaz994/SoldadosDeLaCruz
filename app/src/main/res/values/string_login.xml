@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_string">Sign In</string>
+    <string name="register_string">Register</string>
+    <string name="login_facebook_string">Login with Facebook</string>
+    <string name="login_twitter_string">Login with Twitter</string>
+    <string name="login_google_string">Login with Google</string>
+</resources>

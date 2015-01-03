@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/LightBlue">
+
+    <!-- Header begins -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginHeader">
+        <!-- Logo Starts -->
+        <ImageView
+            android:src="@drawable/ic_insignia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Logo Ends -->
+
+    </LinearLayout>
+    <!-- Header Ends -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"></LinearLayout>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inputType="textEmailAddress"
+        android:id="@+id/loginEmail"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inputType="textPassword"
+        android:password="true"
+        android:hint="Password"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/login_string"/>
+
+</RelativeLayout>
