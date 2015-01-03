@@ -17,6 +17,7 @@ import com.artifex.mupdfdemo.MuPDFCore;
 import com.artifex.mupdfdemo.MuPDFPageAdapter;
 import com.artifex.mupdfdemo.MuPDFReaderView;
 import com.artifex.mupdfdemo.SearchTask;
+import com.artifex.mupdfdemo.SearchTaskResult;
 
 import org.soldiersofthecross.soldadosdelacruz.Constants;
 import org.soldiersofthecross.soldadosdelacruz.R;
@@ -33,6 +34,7 @@ public class EscuelaSabaticaFragment extends Fragment {
     private SearchTask searchTask;
     Bundle arguments = new Bundle();
     private String mFilepath;
+    private SearchTask mSearchTask;
     final private static String TAG = "EscuelaSabaticaFragment";
 
     public EscuelaSabaticaFragment() {
@@ -49,10 +51,13 @@ public class EscuelaSabaticaFragment extends Fragment {
         // inflating the escuela sabatica view
         View escuelaSabaticaView = inflater.inflate(R.layout.fragment_escuela_sabatica, container, false);
 
+        // casting the pdf layout to a relative layout
         escuelaSabaticaLayout = (RelativeLayout) escuelaSabaticaView.findViewById(R.id.pdflayout);
 
+        // opening the pdf file and setting it to a mupdf core object
         pdfCore = openPdfFile(Uri.decode(Constants.pathToPdf));
 
+        // if we returned a non null null object then start the view
         if(pdfCore != null) {
             pdfReaderView = new MuPDFReaderView(getActivity()) {
                 @Override
@@ -67,6 +72,14 @@ public class EscuelaSabaticaFragment extends Fragment {
             escuelaSabaticaLayout.addView(pdfReaderView);
         }
 
+        mSearchTask = new SearchTask(mContext, pdfCore) {
+            @Override
+            protected void onTextFound(SearchTaskResult result) {
+                SearchTaskResult.set(result);
+                pdfReaderView.setDisplayedViewIndex(result.pageNumber);
+                pdfReaderView.resetupChildren();
+            }
+        };
 
         return escuelaSabaticaView;
 
@@ -99,13 +112,28 @@ public class EscuelaSabaticaFragment extends Fragment {
         return pdfCore;
     }
 
+    public void searchQuery(int direction, String query) {
+        int displayPage = pdfReaderView.getDisplayedViewIndex();
+        SearchTaskResult searchTaskResult = SearchTaskResult.get();
+        int searchPage = searchTaskResult != null ? searchTaskResult.pageNumber : -1;
+        mSearchTask.go(query, direction, displayPage, searchPage);
+    }
+
     @Override
     public void onDestroy() {
+        if(pdfCore != null) {
+            pdfCore.onDestroy();
+        }
 
+        pdfCore = null;
+        super.onDestroy();
     }
 
     @Override
     public void onPause() {
-
+        super.onPause();
+        if(mSearchTask != null) {
+            mSearchTask.stop();
+        }
     }
 }

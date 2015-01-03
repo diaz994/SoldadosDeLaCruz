@@ -3,9 +3,12 @@ package org.soldiersofthecross.soldadosdelacruz.MaterialNavigationDrawer;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 import org.soldiersofthecross.soldadosdelacruz.R;
 import org.soldiersofthecross.soldadosdelacruz.fragments.EscuelaSabaticaFragment;
@@ -33,12 +36,31 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
     private MaterialSection informacion;
     private MaterialSection configuracion;
 
-    private Fragment escuelaSabaticaFragment;
+    private EscuelaSabaticaFragment escuelaSabaticaFragment;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+//        SearchView.OnQueryTextListener textChangeListener = new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                escuelaSabaticaFragment.searchQuery(1, query);
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                return true;
+//            }
+//        };
+//
+//        searchView.setOnQueryTextListener(textChangeListener);
+//        return super.onCreateOptionsMenu(menu);
+//
         return true;
     }
 

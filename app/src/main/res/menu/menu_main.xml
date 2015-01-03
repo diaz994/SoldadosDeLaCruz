@@ -4,4 +4,13 @@
     tools:context="org.soldiersofthecross.soldadosdelacruz.MainActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/menu_search"
+        app:showAsAction="always"
+        android:hint="@string/menu_search_hint"
+        android:actionViewClass="android.widget.SearchView">
+
+    </item>
 </menu>
