@@ -118,6 +118,7 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
         this.allowArrowAnimation();
 
         // addding the sections
+        this.addSection(home);
         this.addSection(escuelaSabatica);
         this.addSection(mesaDeFe);
 

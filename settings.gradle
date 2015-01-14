@@ -1,2 +1,2 @@
-include ':app', ':mupdflibrary'
+include ':app', ':mupdflibrary', ':backend'
 include ':libs'
