@@ -90,16 +90,18 @@
     <orderEntry type="library" exported="" name="asne-instagram-0.3.3" level="project" />
     <orderEntry type="library" exported="" name="PdfViewer" level="project" />
     <orderEntry type="library" exported="" name="Parse-1.8.0" level="project" />
+    <orderEntry type="library" exported="" name="android-async-http-1.4.5" level="project" />
     <orderEntry type="library" exported="" name="facebook-android-sdk-3.19.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="asne-facebook-0.3.3" level="project" />
-    <orderEntry type="library" exported="" name="ParseCrashReporting-1.8.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="asne-googleplus-0.3.3" level="project" />
     <orderEntry type="library" exported="" name="twitter4j-core-4.0.2" level="project" />
+    <orderEntry type="library" exported="" name="anddown-0.2.1" level="project" />
     <orderEntry type="library" exported="" name="simple.facebook-2.2" level="project" />
     <orderEntry type="library" exported="" name="asne-twitter-0.3.3" level="project" />
     <orderEntry type="library" exported="" name="bolts-android-1.1.4" level="project" />
+    <orderEntry type="library" exported="" name="ParseCra0shReporting-1.8.0" level="project" />
     <orderEntry type="module" module-name="mupdflibrary" exported="" />
   </component>
 </module>

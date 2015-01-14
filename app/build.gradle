@@ -19,12 +19,16 @@ android {
     }
 }
 
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':mupdflibrary')
     compile files('libs/Parse-1.8.0/Parse-1.8.0.jar')
-    compile files('libs/Parse-1.8.0/ParseCrashReporting-1.8.0.jar')
+    compile files('libs/Parse-1.8.0/ParseCra0shReporting-1.8.0.jar')
     compile files('libs/PdfViewer.jar')
+    compile 'com.commonsware.cwac:anddown:0.2.+'
+    compile 'com.loopj.android:android-async-http:1.4.5'
     compile 'com.github.asne:asne-facebook:0.3.3'
     compile 'com.github.asne:asne-googleplus:0.3.3'
     compile 'com.github.asne:asne-twitter:0.3.3'

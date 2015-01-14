@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+import android.view.View.OnLongClickListener;
 
 import com.artifex.mupdfdemo.MuPDFActivity;
 import com.artifex.mupdfdemo.MuPDFCore;
@@ -19,8 +21,14 @@ import com.artifex.mupdfdemo.MuPDFReaderView;
 import com.artifex.mupdfdemo.SearchTask;
 import com.artifex.mupdfdemo.SearchTaskResult;
 
+import org.apache.http.Header;
+import org.soldiersofthecross.soldadosdelacruz.AbstractHttpUtility;
 import org.soldiersofthecross.soldadosdelacruz.Constants;
 import org.soldiersofthecross.soldadosdelacruz.R;
+
+import com.loopj.android.http.*;
+
+import java.io.InputStream;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,6 +44,8 @@ public class EscuelaSabaticaFragment extends Fragment {
     private String mFilepath;
     private SearchTask mSearchTask;
     final private static String TAG = "EscuelaSabaticaFragment";
+
+    public AsyncHttpClient client = new AsyncHttpClient();
 
     public EscuelaSabaticaFragment() {
         // Required empty public constructor
@@ -55,7 +65,7 @@ public class EscuelaSabaticaFragment extends Fragment {
         escuelaSabaticaLayout = (RelativeLayout) escuelaSabaticaView.findViewById(R.id.pdflayout);
 
         // opening the pdf file and setting it to a mupdf core object
-        pdfCore = openPdfFile(Uri.decode(Constants.pathToPdf));
+        pdfCore = openPdfFile(Uri.decode("/storage/emulated/0/Download/escuela_sabatica_2014.pdf"));
 
         // if we returned a non null null object then start the view
         if(pdfCore != null) {
@@ -80,6 +90,23 @@ public class EscuelaSabaticaFragment extends Fragment {
                 pdfReaderView.resetupChildren();
             }
         };
+
+        escuelaSabaticaView.setOnLongClickListener(new OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.d(TAG, "In the Long on click for the fragment");
+                return true;
+            }
+        });
+
+        escuelaSabaticaLayout.setOnLongClickListener(new OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getActivity(), "In the long click", Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "In the Long on click for the fragment");
+                return true;
+            }
+        });
 
         return escuelaSabaticaView;
 
@@ -117,6 +144,25 @@ public class EscuelaSabaticaFragment extends Fragment {
         SearchTaskResult searchTaskResult = SearchTaskResult.get();
         int searchPage = searchTaskResult != null ? searchTaskResult.pageNumber : -1;
         mSearchTask.go(query, direction, displayPage, searchPage);
+    }
+
+    public void openPdfFileFromResources(String path) {
+        String uri = "android.resource://" + "org.soldiersofthecross.soldadosdelacruz.fragments" + "/" + R.raw.escuela_sabatica_2014;
+    }
+
+    // get the escuela sabatica pdf file from dropbox endpoint
+    public void getPdfFile(String endpoint) {
+        client.get(endpoint, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
     }
 
     @Override

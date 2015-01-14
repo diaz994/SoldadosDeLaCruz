@@ -3,5 +3,11 @@
 
 
     <string name="app_name">Soldados de la Cruz</string>
-
+    <string name="sabbathSchool">Escuela Sabatica</string>
+    <string name="dailyDevotional">Mesa De Fe</string>
+    <string name="news">Noticias</string>
+    <string name="radio">Radio</string>
+    <string name="information">Informacion</string>
+    <string name="donation">Donacion</string>
+    <string name="settings">Configuracion</string>
 </resources>

@@ -2,6 +2,13 @@
 <resources>
 
     <string name="app_name">Soldiers of the Cross</string>
+    <string name="sabbathSchool">Sabbath School</string>
+    <string name="dailyDevotional">Daily Devotional</string>
+    <string name="news">News</string>
+    <string name="radio">Radio</string>
+    <string name="information">Information</string>
+    <string name="donation">Donation</string>
+    <string name="settings">Settings</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
