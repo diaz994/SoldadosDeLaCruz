@@ -210,5 +210,20 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
     public void onFragmentInteraction(String id) {
         Log.d(TAG, "Position " + id + "has been clicked.");
     }
+
+    // implementing the method when the back is pressed from a deeper fragment
+    // than the initial fragment call.
+    @Override
+    public void onBackPressed() {
+
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if(count == 0) {
+            Log.d(TAG, "The amount of items in back stack in onBackPressed: " + count);
+            super.onBackPressed();
+        } else {
+            getFragmentManager().popBackStack();
+        }
+    }
 }
 
