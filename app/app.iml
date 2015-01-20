@@ -83,25 +83,26 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="google-oauth-client-1.19.0" level="project" />
     <orderEntry type="library" exported="" name="MaterialNavigationDrawer-1.2.6" level="project" />
-    <orderEntry type="library" exported="" name="asne-core-0.3.3" level="project" />
+    <orderEntry type="library" exported="" name="jsr305-1.3.9" level="project" />
     <orderEntry type="library" exported="" name="play-services-6.5.87" level="project" />
+    <orderEntry type="library" exported="" name="jackson-core-2.1.3" level="project" />
+    <orderEntry type="library" exported="" name="google-api-client-1.19.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
-    <orderEntry type="library" exported="" name="asne-instagram-0.3.3" level="project" />
     <orderEntry type="library" exported="" name="PdfViewer" level="project" />
-    <orderEntry type="library" exported="" name="Parse-1.8.0" level="project" />
+    <orderEntry type="library" exported="" name="google-api-client-android-1.19.0" level="project" />
     <orderEntry type="library" exported="" name="android-async-http-1.4.5" level="project" />
-    <orderEntry type="library" exported="" name="facebook-android-sdk-3.19.1" level="project" />
+    <orderEntry type="library" exported="" name="google-http-client-1.19.0" level="project" />
+    <orderEntry type="library" exported="" name="backend-android-endpoints" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
-    <orderEntry type="library" exported="" name="asne-facebook-0.3.3" level="project" />
+    <orderEntry type="library" exported="" name="google-http-client-android-1.19.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
-    <orderEntry type="library" exported="" name="asne-googleplus-0.3.3" level="project" />
-    <orderEntry type="library" exported="" name="twitter4j-core-4.0.2" level="project" />
+    <orderEntry type="library" exported="" name="google-http-client-jackson2-1.19.0" level="project" />
+    <orderEntry type="library" exported="" name="guava-jdk5-13.0" level="project" />
     <orderEntry type="library" exported="" name="anddown-0.2.1" level="project" />
+    <orderEntry type="library" exported="" name="calligraphy-2.0.0" level="project" />
     <orderEntry type="library" exported="" name="simple.facebook-2.2" level="project" />
-    <orderEntry type="library" exported="" name="asne-twitter-0.3.3" level="project" />
-    <orderEntry type="library" exported="" name="bolts-android-1.1.4" level="project" />
-    <orderEntry type="library" exported="" name="ParseCra0shReporting-1.8.0" level="project" />
     <orderEntry type="module" module-name="mupdflibrary" exported="" />
   </component>
 </module>

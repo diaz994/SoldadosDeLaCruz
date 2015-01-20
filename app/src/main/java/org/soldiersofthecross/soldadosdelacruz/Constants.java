@@ -6,4 +6,6 @@ package org.soldiersofthecross.soldadosdelacruz;
 public class Constants {
 
     final public static String pathToPdf = "/sdcard/Download/escuela_sabatica_2014.pdf";
+
+    public static String STRING_EMPTY = "";
 }
